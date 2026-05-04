@@ -1,4 +1,5 @@
-Monitoramento Meteorológico Distribuído - Equipe 5
+Monitoramento Meteorológico Distribuído
+
 Este projeto consiste na implementação de um nó de monitoramento em tempo real para a disciplina de Sistemas Distribuídos. O objetivo é demonstrar a comunicação entre nós e a propagação de eventos em um ambiente de nuvem.
 
 Objetivos
