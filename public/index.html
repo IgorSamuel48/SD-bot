@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alerta Meteorológico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="painel">
+        <h1>Monitoramento Meteorológico 🌦️</h1>
+        <div id="display" class="status-box inativo">Estado: Inativo</div>
+        
+        <div class="controles">
+            <button id="btn-alerta" class="btn-danger">Enviar Alerta de Chuva</button>
+            <button id="btn-reset">Resetar Sistema</button>
+        </div>
+        <p id="role-msg" style="font-size: 0.8em; color: #666; margin-top: 10px;"></p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
