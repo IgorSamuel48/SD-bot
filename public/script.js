@@ -9,18 +9,18 @@ const btnAlerta = document.getElementById('btn-alerta');
 const btnReset = document.getElementById('btn-reset');
 const roleMsg = document.getElementById('role-msg');
 
-// Lógica para identificar se o acesso é de "sensor" ou "monitor"
-// Usamos uma verificação robusta para evitar erros com barras extras na URL
+// O código identifica se o usuário deve ter poderes de sensor via parâmetros na URL
 const urlParams = new URLSearchParams(window.location.search);
 const tipoParam = urlParams.get('tipo');
 const ehSensor = tipoParam && tipoParam.toLowerCase().trim() === 'sensor';
 
 // Configuração da interface baseada no papel do nó (Transparência de Acesso)
 if (ehSensor) {
+    // Se for sensor, exibe os botões de controle
     console.log("Nó operando como: SENSOR");
     if (roleMsg) roleMsg.innerText = "Modo: SENSOR (Controles Habilitados)";
     // Os botões permanecem visíveis para o sensor
-} else {
+} else { // Se for monitor, esconde os botões (apenas visualização)
     console.log("Nó operando como: MONITOR");
     const controles = document.querySelector('.controles');
     if (controles) controles.style.display = 'none';
